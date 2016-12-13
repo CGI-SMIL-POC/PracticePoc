@@ -67,7 +67,7 @@
     </div>
 
     <div class="form-group row">
-      <label class = "col-xs-1 col-form-label">Last Name*</label>
+      <label class = "col-xs-1 col-form-label">LastName*</label>
       <% if f.object.errors[:lastname].present? %>
         Last Name <%= f.object.errors[:lastname].join(",") %>
       <% end %>  
@@ -88,7 +88,7 @@
     </div>
 
     <div class="form-group row">
-     <label  class = "col-xs-1 col-form-label">ZIP*</label>
+     <label  class = "col-xs-1 col-form-label">ZIPCode*</label>
      <% if f.object.errors[:zipcode].present? %>
         ZIP code<%= f.object.errors[:zipcode].join(",") %>
      <% end %>   
