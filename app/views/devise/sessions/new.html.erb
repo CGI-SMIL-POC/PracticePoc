@@ -64,7 +64,7 @@
     </div>
 
     <div class="form-group row">
-      <label class = "col-xs-1 col-form-label">Last Name*</label>
+      <label class = "col-xs-1 col-form-label">LastName*</label>
       <div class="col-xs-6">
         <%= f.text_field :lastname, autofocus: true %>
         <%= f.object.errors[:lastname].join(",") %>
@@ -81,7 +81,7 @@
     </div>
 
     <div class="form-group row">
-     <label  class = "col-xs-1 col-form-label">ZIP*</label>
+     <label  class = "col-xs-1 col-form-label">ZIPCode*</label>
       <div class="col-xs-6">
         <%= f.object.errors[:zipcode].join(",") %>
         <%= f.text_field :zipcode, autofocus: true %>
