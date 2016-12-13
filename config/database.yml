@@ -1,6 +1,15 @@
 development:
  adapter: mysql2
  encoding: utf8
+ database: poc_db
+ username: root
+ password: root
+ host: localhost
+ port: 3306
+
+production:
+ adapter: mysql2
+ encoding: utf8
  database: smil_sql01
  username: b436ebb866cb4c
  password: e8c0df15
