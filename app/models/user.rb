@@ -4,5 +4,6 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   validates :username , uniqueness: true
-  validates :lastname,:zipcode,:username, presence: true
+  validates :lastname,:username, presence: true
+  validates :zipcode, length: { is: 6 , :message => "should be 6 characters"}
 end
