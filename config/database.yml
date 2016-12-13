@@ -1,12 +1,12 @@
 #This is for development
-development:
- adapter: mysql2
- encoding: utf8
- database: poc_db
- username: root
- password: root
- host: localhost
- port: 3306
+# development:
+#  adapter: mysql2
+#  encoding: utf8
+#  database: poc_db
+#  username: root
+#  password: Pa$sword1
+#  host: localhost
+#  port: 3306
 
 production:
  adapter: mysql2
