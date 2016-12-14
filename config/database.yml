@@ -1,12 +1,11 @@
 development:
- adapter: mysql2
- encoding: utf8
- database: poc_db 
- username: root 
- password: root
- host: 127.0.0.1 
- port: 3306
-
+  adapter: mysql2
+  encoding: utf8
+  database: smil_sql01
+  username: b436ebb866cb4c
+  password: e8c0df15
+  host: us-cdbr-azure-west-b.cleardb.com
+  port: 3306
 # development:
 #  adapter: mysql2
 #  encoding: utf8
