@@ -8,4 +8,6 @@ class User < ActiveRecord::Base
   validates :zipcode, length: { is: 5 , :message => " should be 5 characters only"}
   validates :zipcode, numericality: { :message => "must be numeric"}
   validates :password , length: { maximum: 20 }
+  validates :email , uniqueness: true 
+
 end
