@@ -22,7 +22,7 @@
 en:
   hello: "Hello world"
 
-en:
+  en:
   activerecord:
     errors:
       models:
@@ -42,14 +42,11 @@ en:
             email:
               blank: "is required"
 
-            en:
-  activerecord:
-    attributes:
-      user:
-        password_confirmation: "Passwords"
-    errors:
-      models:
-        user:
-          attributes:
+            
+
+            
             password_confirmation:
-              confirmation: " Passwords don't match"  
+              confirmation: " Passwords don't match"
+
+
+  
