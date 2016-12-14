@@ -1,4 +1,4 @@
-production:
+test:
  adapter: mysql2
  encoding: utf8
  database: smil_sql01
