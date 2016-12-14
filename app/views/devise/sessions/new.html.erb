@@ -2,7 +2,7 @@
   <%= image_tag("capture.PNG", size: "300x100") %> 
 </div>  
  <div class = "col-md-6 text-center">
-    <h1 align="left">Sign In</h1>
+    <h1 align="left">Log in</h1>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="form-group row">
         <%= f.label "username*", class: "col-xs-1 col-form-label" %>
@@ -12,22 +12,15 @@
       </div>
 
       <div class="form-group row">
-        <%= f.label "password*                                   ", class: "col-xs-1 col-form-label"%>
+        <%= f.label "password*", class: "col-xs-1 col-form-label"%>
 
         <div class="col-xs-6">
           <%= f.password_field :password, autocomplete: "off" %>
         </div>
       </div>
 
-      <% if devise_mapping.rememberable? -%>
-        <div class="form-group row">
-          <%= f.check_box :remember_me,style: 'float: left; ' %>
-          <%= f.label :remember_me ,style: 'float: left; '%>
-        </div>
-      <% end -%>
-
       <div class="actions">
-        <%= f.submit "Log in",class: "btn",style: 'float: left; ' %>
+        <%= f.submit "Log in",class: "btn btn-primary",style: 'float: left; ' %>
       </div>
   <% end %> 
  </div>
@@ -89,7 +82,7 @@
     </div>
 
     <div class="actions">
-      <%= f.submit "Create Account",class: "btn",style: 'float: left; ' %>
+      <%= f.submit "Create Account",class: "btn btn-primary",style: 'float: left; ' %>
     </div>
   <% end %>
  </div>
