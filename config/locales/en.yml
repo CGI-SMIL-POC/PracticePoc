@@ -41,3 +41,15 @@ en:
               blank: "is required"
             email:
               blank: "is required"
+
+            en:
+  activerecord:
+    attributes:
+      user:
+        password_confirmation: "Passwords"
+    errors:
+      models:
+        user:
+          attributes:
+            password_confirmation:
+              confirmation: " Passwords don't match"  
