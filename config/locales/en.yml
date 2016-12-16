@@ -22,31 +22,11 @@
 en:
   hello: "Hello world"
 
-  en:
-  activerecord:
-    errors:
-      models:
-        user:
-          attributes:
-            username:
-              blank: "is required"
-              taken: "is already taken"
-              invalid: "Please Specify a valid username"
-            password:
-              blank: "is required "
-              confirmation: " does not match"
-            password_confirmation:
-              blank: "is required"
-            lastname:
-              blank: "is required"
-            email:
-              blank: "is required"
-
-            
-
-            
-            password_confirmation:
-              confirmation: " Passwords don't match"
-
-
-  
+#en: 
+# activerecord:
+ #  errors:
+  #   models:
+   #    user:
+    #     attributes:
+     #      password_confirmation:
+      #       confirmation: "The passwords don't match"  
