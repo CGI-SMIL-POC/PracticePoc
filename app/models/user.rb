@@ -3,11 +3,12 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates :username , uniqueness: true , length: { maximum: 50 }
-  validates :lastname,:username, presence: true
-  validates :zipcode, length: { is: 5 , :message => " should be 5 characters only"}
-  validates :zipcode, numericality: { :message => "must be numeric"}
-  validates :password , length: { maximum: 20 }
-  validates :email , uniqueness: true 
-
+  validates :username , presence: { :message => "The username is required"} ,uniqueness: { :message => "The username is taken"}
+  validates :password, presence: { :message => "The password is required"}
+  validates :password_confirmation, presence: { :message => "The confirm password is required"}
+  validates :zipcode, presence: { :message => "The zipcode is required"},
+   numericality: { only_integer: true ,:message => "The ZIP must be numeric"},
+   length: { is: 5 , :message => "ZIP Code should be 5 characters"}
+  validates :email, presence: { :message => "The email is required"}
+  validates :lastname, presence: { :message => "The lastname is required"}, length: { maximum: 40 }
 end
