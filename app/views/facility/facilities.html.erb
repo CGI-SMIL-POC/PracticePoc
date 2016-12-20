@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<h2>Facilities Near You</h2>
+<h2>&nbsp&nbspFacilities Near You</h2>
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,7 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function myFunction(arr) {
-   if (arr.length > 0) {
+if (arr.length > 0) {
 
    var out = "";
    var i;
@@ -38,10 +38,9 @@ function myFunction(arr) {
   out+='</table>'
 }
 else {
-   out = "<h2> no record found </h2>"
+out = "<h3><i><font color=#FF0000>&nbsp&nbsp&nbspNo facilities found in your ZIP Code</font></i></h3>"
 }
    document.getElementById("id01").innerHTML = out;
-
 }
 </script>
 
