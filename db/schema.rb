@@ -11,9 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219181547) do
+ActiveRecord::Schema.define(version: 20161219072347) do
 
-  create_table "caseworker", force: :cascade do |t|
+  create_table "CaseWorker", force: :cascade do |t|
     t.integer  "CaseWorkerId", limit: 4
     t.string   "FirstName",    limit: 40
     t.string   "LastName",     limit: 40, null: false
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20161219181547) do
     t.datetime "updated_at"
   end
 
-  create_table "child", force: :cascade do |t|
+  create_table "Child", force: :cascade do |t|
     t.integer  "ChildId",         limit: 4
     t.string   "FirstName",       limit: 40
     t.string   "MiddleInitial",   limit: 1
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20161219181547) do
     t.datetime "updated_at"
   end
 
-  create_table "parent", force: :cascade do |t|
+  create_table "Parent", force: :cascade do |t|
     t.integer  "ParentId",      limit: 4
     t.string   "UserName",      limit: 50,  null: false
     t.string   "Password",      limit: 20,  null: false
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20161219181547) do
     t.datetime "updated_at"
   end
 
-  create_table "parentchild", force: :cascade do |t|
+  create_table "ParentChild", force: :cascade do |t|
     t.integer  "ParentChildId",   limit: 4
     t.integer  "ParentId",        limit: 4, null: false
     t.integer  "ChildId",         limit: 4, null: false
@@ -85,8 +85,6 @@ ActiveRecord::Schema.define(version: 20161219181547) do
     t.string   "state",                  limit: 255
     t.string   "zipcode",                limit: 255
     t.string   "phone",                  limit: 255
-    t.string   "suffix",                 limit: 255
-    t.string   "marital_status",         limit: 255
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
