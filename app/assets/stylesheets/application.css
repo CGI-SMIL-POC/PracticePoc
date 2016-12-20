@@ -22,10 +22,14 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: auto;
+    margin-right: 20px;
+}
+table,th,td{
+  margin-left: 20px;
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border: 1px solid #4682b4;
     text-align: left;
     padding: 8px;
 }
