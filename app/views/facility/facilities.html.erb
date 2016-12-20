@@ -1,2 +1,42 @@
 <p id="notice"><%= notice %></p>
 <h2>Facilities Near You</h2>
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="id01"></div>
+
+<script>
+var xmlhttp = new XMLHttpRequest();
+var zipCode= 99999;
+//var zipCode = @zipcode
+var url = "https://chhs.data.ca.gov/resource/mffa-c6z5.json?$select=facility_type,facility_name,facility_address,facility_city,facility_state,facility_telephone_number,facility_zip&facility_zip=" + zipCode;
+
+xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myArr = JSON.parse(this.responseText);
+        myFunction(myArr);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = "";
+    var i;
+    var j;
+    out += '<table>';
+    out +='<th></th><th>Address</th><th>FacilityName</th><th>Type</th><th>Phone</th>'
+    for(i = 0; i < arr.length; i++) {
+    j = i + 1;
+    out += '<tr>'
+        out +='<td>'+j+') </td><td>'+ arr[i].facility_address + "<br>" + arr[i].facility_city + " " + arr[i].facility_state + ", " +  arr[i].facility_zip +'</td><td> '+arr[i].facility_name+'</td><td>'+arr[i].facility_type +'</td><td>'+arr[i].facility_telephone_number+'</td></tr>';
+    }
+   out+='</table>'
+    document.getElementById("id01").innerHTML = out;
+}
+</script>
+
+</body>
+</html>

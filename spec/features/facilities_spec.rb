@@ -2,9 +2,10 @@ require 'spec_helper'
 
 
 feature 'User sees Facilities Link' do
+  
   scenario 'with valid values' do
     visit "/"
-    sign_up "ss7", "password", "password", "password", "rios7@fdd.com", "95608"
+    sign_up_with "ss7", "password", "password", "password", "rios7@fdd.com", "95608"
 
     page.should have_link("Find Children’s Residential Facilities", :href=>"/facility/facilities")
     #expect(page).to have_link('',href: 'http://localhost:3000')
@@ -12,10 +13,8 @@ feature 'User sees Facilities Link' do
     click_link "/facility/facilities"
     expect(page).to have_content("Facilities Near You")
   end  
-  end
 
-  scenario 'user sees Facilities page with grid and columns 
-  Facility Type, Facility Name, Facility Address, Facility Phone Number'do
+  scenario 'user sees Facilities page with grid and columns Facility Type, Facility Name, Facility Address, Facility Phone Number'do
     expect(page).to have_css('table')
     expect(page).to have_content("Facility Type")
     expect(page).to have_content("Facility Name")
@@ -34,6 +33,7 @@ feature 'User sees Facilities Link' do
 
     def sign_up_with(username, password, confirmpassword, lastname, email, zip)
       visit "/"
+      within('form#new_user') do
       fill_in 'Username', with: username
       fill_in 'Password', with: password
       fill_in 'user_password_confirmation', with: confirmpassword
@@ -41,5 +41,6 @@ feature 'User sees Facilities Link' do
       fill_in 'user_email', with: email
       fill_in 'user_zipcode', with: zip
       click_button "Create Account"
-    end   
+    end  
+    end 
 end

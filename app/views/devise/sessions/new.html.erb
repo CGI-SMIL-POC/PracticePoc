@@ -2,6 +2,9 @@
   <%= image_tag("capture.PNG", size: "300x100") %> 
 </div>  
 
+<br/>
+<br/>
+
 <div class = "col-md-6 text-center">
     <h1 align="left">Sign In</h1>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -85,7 +88,7 @@
     </div>
 
     <div class="form-group row">
-     <%= f.label :username, "ZIP&nbsp;Code*".html_safe, class: "col-xs-1 col-form-label" %>
+     <%= f.label :zipcode, "ZIP&nbsp;Code*".html_safe, class: "col-xs-1 col-form-label" %>
       <div class="col-xs-8">
         
         <%= f.text_field :zipcode, autofocus: true %>
