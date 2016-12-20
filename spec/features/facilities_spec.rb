@@ -2,7 +2,7 @@ require 'spec_helper'
 
 
 feature 'User sees Facilities Link' do
-  
+
   scenario 'with valid values' do
     visit "/"
     sign_up_with "ss7", "password", "password", "password", "rios7@fdd.com", "95608"
@@ -12,9 +12,10 @@ feature 'User sees Facilities Link' do
     select_link  "Find Children’s Residential Facilities"
     click_link "/facility/facilities"
     expect(page).to have_content("Facilities Near You")
-  end  
+  end
 
   scenario 'user sees Facilities page with grid and columns Facility Type, Facility Name, Facility Address, Facility Phone Number'do
+  visit "/facility/facilities"
     expect(page).to have_css('table')
     expect(page).to have_content("Facility Type")
     expect(page).to have_content("Facility Name")
@@ -41,6 +42,6 @@ feature 'User sees Facilities Link' do
       fill_in 'user_email', with: email
       fill_in 'user_zipcode', with: zip
       click_button "Create Account"
-    end  
-    end 
+    end
+    end
 end
