@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-<h2>&nbsp&nbspFacilities Near You</h2>
+<h2>&nbsp&nbsp&nbspFacilities Near You</h2>
+<br/>
 
 <!DOCTYPE html>
 <html>
@@ -29,11 +30,11 @@ if (arr.length > 0) {
    var i;
    var j;
    out += '<table>';
-   out +='<th></th><th>Address</th><th>FacilityName</th><th>Type</th><th>Phone</th>'
+   out +='<th></th><th>Facility Name</th><th>Facility Type</th><th>Facility Address</th><th>Facility Phone Number</th>'
    for(i = 0; i < arr.length; i++) {
    j = i + 1;
    out += '<tr>'
-       out +='<td>'+j+') </td><td>'+ arr[i].facility_address + "<br>" + arr[i].facility_city + " " + arr[i].facility_state + ", " +  arr[i].facility_zip +'</td><td> '+arr[i].facility_name+'</td><td>'+arr[i].facility_type +'</td><td>'+arr[i].facility_telephone_number+'</td></tr>';
+       out +='<td>'+j+') </td><td>'+ arr[i].facility_name +'</td><td> '+ arr[i].facility_type +'</td><td>'+ arr[i].facility_address + "<br>" + arr[i].facility_city + " " + arr[i].facility_state + ", " +  arr[i].facility_zip +'</td><td>'+arr[i].facility_telephone_number+'</td></tr>';
    }
   out+='</table>'
 }

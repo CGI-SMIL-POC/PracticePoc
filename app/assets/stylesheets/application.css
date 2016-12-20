@@ -25,16 +25,16 @@ table {
     margin-right: 20px;
 }
 table,th,td{
-  margin-left: 20px;
+  margin-left: 25px;
 }
 
 td, th {
-    border: 1px solid #4682b4;
+    border: 1px solid #000000;
     text-align: left;
     padding: 8px;
 }
 
-tr:nth-child(even) {
+th {
     background-color: #dddddd;
 }
 </style>
