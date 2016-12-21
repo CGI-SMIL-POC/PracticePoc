@@ -55,7 +55,7 @@
       <%= f.label :password_confirmation,"Confirm&nbsp;Password*".html_safe, class: "col-xs-1 col-form-label" %>
       <div class="col-xs-8">
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
-        <%= f.object.errors[:password_confirmation].first %>
+        <%= f.object.errors[:password_confirmation].join(",") %>
       </div>
     </div>
 
@@ -72,7 +72,7 @@
       <%= f.label "Email*", class: "col-xs-1 col-form-label" %>
       <div class="col-xs-8">
         <%= f.email_field :email %>
-        <%= f.object.errors[:email].join(",") %>
+        <%= f.object.errors[:email].second %>
       </div>  
     </div>
 

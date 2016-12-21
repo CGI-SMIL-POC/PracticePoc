@@ -1,4 +1,90 @@
-<p id="notice"><%= notice %></p>
-<h2>Parent Profile</h2>
+<div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" 
+            data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
+        <%= image_tag("capture.PNG", size: "300x70") %> 
+    </a>
+</div>
+<br/><br/><br/><br />
+<div class="main col-lg-9">
+<h2>Birth Parent Name</h2>
+  <div class="col-md-3">
+  <h4>Parent Information</h4>
 
-<a href="/facility/facilities/">Find Children’s Residential Facilities</a>
+  
+	<p>
+	  <strong>Username:</strong>
+	  <%= current_user.username %>
+	</p>
+
+	<p>
+	  <strong>Firstname:</strong>
+	  <%= current_user.firstname %>
+	</p>
+
+	<p>
+	  <strong>Middlename:</strong>
+	  <%= current_user.middlename %>
+	</p>
+
+	<p>
+	  <strong>Lastname:</strong>
+	  <%= current_user.lastname %>
+	</p>
+	<p>
+	  <strong>Suffix:</strong>
+	  <%= current_user.suffix %>
+	</p>
+	
+
+	<p>
+	  <strong>Marital Status:</strong>
+	  <%= current_user.marital_status %>
+	</p>
+  </div>
+  <div class="col-md-3">
+ <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Edit",  edit_user_registration_path(current_user) %></h4>
+  	<p>
+	  <strong>Street Address:</strong>
+	  <%= current_user.street %>
+	</p>
+
+	<p>
+	  <strong>City:</strong>
+	  <%= current_user.city %>
+	</p>
+
+	<p>
+	  <strong>State:</strong>
+	  <%= current_user.state %>
+	</p>
+
+	<p>
+	  <strong>ZIP:</strong>
+	  <%= current_user.zipcode %>
+	</p>
+
+	<p>
+	  <strong>Phone:</strong>
+	  <%= current_user.phone %>
+	</p>
+	<p>
+	  <strong>Email:</strong>
+	  <%= current_user.email %>
+	</p>
+  </div>
+  <div class="col-md-3">
+  <h4>Children</h4>
+  <h4> <a href="/facility/facilities/">Find Children’s Residential Facilities</a></h4>
+  </div>
+</div>
+
+
+
+
+
