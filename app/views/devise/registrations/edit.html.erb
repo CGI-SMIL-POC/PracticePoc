@@ -70,7 +70,7 @@
   <div class="form-group row">
       <%= f.label "marital_status*", class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
-        <%= f.select :marital_status, options_for_select([["Select One", ""], "Married", "UnMarried"]), :class => 'genForm_dropBox' %>
+        <%= f.select :marital_status, options_for_select([["Select One", ""],  "Single","Married", "Divorced","Widowed"]), :class => 'genForm_dropBox' %>
       </div>
   </div>
   </div>
@@ -124,7 +124,7 @@
 
 
   <div class="actions">
-    <%= f.submit "Update", class: "btn" %>
+    <%= f.submit "Save", class: "btn" %>
   </div>
 <% end %>
 
