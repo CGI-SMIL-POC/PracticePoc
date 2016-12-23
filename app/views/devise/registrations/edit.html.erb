@@ -1,59 +1,41 @@
-<h2>Parent Profile</h2>
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;<b>Parent Profile</b></h2>
+<br/>
 <div class="main col-lg-9">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
   <div class="col-md-6">
+  <h4><b><u>Account Information</u></b></h4>
+  <br/>
   <div class="form-group row">
       <%= f.label "username*", class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
-        <%= f.text_field :username, autofocus: true %>
+        <%= f.text_field :username, autofocus: true, :readonly => true %>
       </div>
   </div> 
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
   <div class="form-group row">
-    <%= f.label :current_password,"Current&nbsp;Password*".html_safe, class: "col-xs-3 col-form-label" %> 
+    <%= f.label :password,"Password*".html_safe, class: "col-xs-3 col-form-label" %> 
     <div class="col-xs-6">
-    <%= f.password_field :current_password, autocomplete: "off" %>
+    <%= f.password_field :password, :readonly => true %>
     </div>
   </div>
 
   <div class="form-group row">
-    <%= f.label :new_password, class: "col-xs-3 col-form-label" %> 
-    <div class="col-xs-6">
-    <%= f.password_field :password, autocomplete: "off" %>
-    <i>(leave blank if you don't want to change it)</i>
-    </div>    
-  </div>
-
-  <div class="form-group row">
-    <%= f.label :password_confirmation,"Confirm&nbsp;Password".html_safe, class: "col-xs-3 col-form-label" %>
-    <div class="col-xs-6">
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-  </div>
-
-  
-
-  <div class="form-group row">
-      <%= f.label "firstname*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "firstname*", "First Name".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :firstname, autofocus: true %>
       </div>
   </div>
 
   <div class="form-group row">
-      <%= f.label "middlename*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "middlename*", "Middle Initial".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :middlename, autofocus: true %>
       </div>
   </div>
 
   <div class="form-group row">
-      <%= f.label "lastname*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "lastname*", "Last Name*".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :lastname, autofocus: true %>
       </div>
@@ -61,71 +43,91 @@
 
 
   <div class="form-group row">
-      <%= f.label "suffix*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "suffix*", "Suffix".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :suffix, autofocus: true %>
       </div>
   </div>
 
   <div class="form-group row">
-      <%= f.label "marital_status*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "marital_status*", "Marital Status".html_safe,class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
-        <%= f.select :marital_status, options_for_select([["Select One", ""],  "Single","Married", "Divorced","Widowed"]), :class => 'genForm_dropBox' %>
+        <%= f.select :marital_status, options_for_select([["Select", ""],  "Single","Married", "Divorced","Widowed"]), :class => 'genForm_dropBox' %>
       </div>
   </div>
   </div>
   <div class="col-md-6">
-
+<h4><b><u>Contact Information</u></b></h4>
+<br/>
   <div class="form-group row">
-      <%= f.label "street*","Street&nbsp;Address*".html_safe, class: "col-xs-3 col-form-label" %>
+      <%= f.label "street*","Street Address".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :street, autofocus: true %>
       </div>
   </div>  
 
   <div class="form-group row">
-      <%= f.label "city*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "city*", "City".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :city %>
       </div>  
   </div>
 
   <div class="form-group row">
-      <%= f.label "state*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "state*", "State".html_safe,class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :state %>
       </div>  
   </div>
 
   <div class="form-group row">
-      <%= f.label "zipcode*", class: "col-xs-3 col-form-label" %>
+      <%= f.label "zipcode*", "ZIP Code*".html_safe, class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :zipcode, autofocus: true %>
       </div>
   </div>
 
-  
-  <div class="form-group row">
-    <%= f.label :email, class: "col-xs-3 col-form-label" %>
-    <div class="col-xs-6">
-    <%= f.email_field :email, autofocus: true %>
-    </div>
-  </div>
-
-  <div class="form-group row">
+<div class="form-group row">
       <%= f.label "phone*", class: "col-xs-3 col-form-label" %>
       <div class="col-xs-6">
         <%= f.text_field :phone %>
       </div>  
   </div>
+ 
 
+<!-- <div class="form-group row">
+<form action="demo_form.asp">
+<%= f.label :HomePhone, "Home Phone".html_safe, class: "col-xs-3 col-form-label" %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=3 min =3 align=left name="AreaCode" >&nbsp;-
+ <input type="text" size=3 min=3 align = center name="Phone1" >&nbsp;-
+<input type="text" min=4 size=4 align = right name="Phone2" ><br>
+</form>
+</div>
+
+<div class="form-group row">
+<form action="demo_form.asp">
+<%= f.label :Cellphone, "Cell Phone".html_safe, class: "col-xs-3 col-form-label" %>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size=3 min =3 align=left name="AreaCode" >&nbsp;-
+ <input type="text" size=3 min=3 align = center name="Phone1" >&nbsp;-
+<input type="text" min=4 size=4 align = right name="Phone2" ><br>
+</form>
+</div> -->
+  
+  <div class="form-group row">
+    <%= f.label :email, "Email*".html_safe, class: "col-xs-3 col-form-label" %>
+    <div class="col-xs-6">
+    <%= f.email_field :email, autofocus: true %>
+    </div>
+  </div>
+<br/>
 </div>
 </div>
 
 
   <div class="actions">
-    <%= f.submit "Save", class: "btn" %>
-  </div>
+<div class="col-xs-10">
+    <%= f.submit "Save", class: "btn btn-primary", style: 'float: right', style: 'margin-left: 920px' %>
+    <%= f.submit "Cancel",class: "btn btn-primary" %>
+</div>
+</div>
 <% end %>
 
 

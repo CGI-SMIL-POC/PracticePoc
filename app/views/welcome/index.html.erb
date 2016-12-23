@@ -11,11 +11,14 @@
     </a>
 </div>
 <br/><br/><br/><br />
+<br/>
 <div class="main col-lg-9">
-<h2> <%= current_user.firstname + " " + current_user.middlename + " " + current_user.lastname %></h2>
+<h2><b><%= current_user.firstname %>&nbsp;<%= current_user.middlename %>&nbsp;<%= current_user.lastname %></b></h2>
+<br/>
   <div class="col-md-3">
-  <h4>Parent Information</h4>
-
+  <h3><b>Parent Profile</b></h3>
+  <br/>
+<h4><b><u>Account Information</u></b></h4>
 
 	<p>
 	  <strong>Username:</strong>
@@ -23,17 +26,22 @@
 	</p>
 
 	<p>
-	  <strong>Firstname:</strong>
+	  <strong>Password:</strong>
+	  <%= current_user.password %>
+	</p>
+
+	<p>
+	  <strong>First Name:</strong>
 	  <%= current_user.firstname %>
 	</p>
 
 	<p>
-	  <strong>Middlename:</strong>
+	  <strong>Middle Initial:</strong>
 	  <%= current_user.middlename %>
 	</p>
 
 	<p>
-	  <strong>Lastname:</strong>
+	  <strong>Last Name:</strong>
 	  <%= current_user.lastname %>
 	</p>
 	<p>
@@ -41,14 +49,18 @@
 	  <%= current_user.suffix %>
 	</p>
 
-
 	<p>
 	  <strong>Marital Status:</strong>
 	  <%= current_user.marital_status %>
 	</p>
   </div>
   <div class="col-md-3">
- <h4> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Edit",  edit_user_registration_path(current_user) %></h4>
+  <br/>
+ <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to "Edit",  edit_user_registration_path(current_user) %></h4>
+ <br/>
+
+  	<h4><b><u>Contact Information</u></b></h4>
+
   	<p>
 	  <strong>Street Address:</strong>
 	  <%= current_user.street %>
@@ -65,21 +77,32 @@
 	</p>
 
 	<p>
-	  <strong>ZIP:</strong>
+	  <strong>ZIP Code:</strong>
 	  <%= current_user.zipcode %>
 	</p>
 
-	<p>
+   <!--  <p>
 	  <strong>Phone:</strong>
 	  <%= current_user.phone %>
 	</p>
+ -->
+	<p>
+	  <strong>Home Phone:</strong>
+	  <%= current_user.homephone %>
+	</p>
+  
+    <p>
+	  <strong>Cell Phone:</strong>
+	  <%= current_user.phone %>
+	</p>
+
 	<p>
 	  <strong>Email:</strong>
 	  <%= current_user.email %>
 	</p>
   </div>
   <div class="col-md-3">
-  <h4>Children</h4>
+  <h3><b>Children</b></h3>
   <h4> <a href="/facility/facilities/">Find Children’s Residential Facilities</a></h4>
   </div>
 </div>
