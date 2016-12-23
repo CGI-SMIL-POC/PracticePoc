@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161219181547) do
+ActiveRecord::Schema.define(version: 20161223054324) do
 
   create_table "caseworker", force: :cascade do |t|
     t.integer  "CaseWorkerId", limit: 4
@@ -87,6 +87,8 @@ ActiveRecord::Schema.define(version: 20161219181547) do
     t.string   "phone",                  limit: 255
     t.string   "suffix",                 limit: 255
     t.string   "marital_status",         limit: 255
+    t.string   "cellphone",              limit: 255
+    t.string   "homephone",              limit: 255
   end
 
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree

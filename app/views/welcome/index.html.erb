@@ -1,5 +1,5 @@
 <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" 
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
             data-target=".navbar-ex1-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
@@ -7,16 +7,16 @@
         <span class="icon-bar"></span>
     </button>
     <a class="navbar-brand" rel="home" href="#" title="Buy Sell Rent Everyting">
-        <%= image_tag("capture.PNG", size: "300x70") %> 
+        <%= image_tag("capture.PNG", size: "300x70") %>
     </a>
 </div>
 <br/><br/><br/><br />
 <div class="main col-lg-9">
-<h2>Birth Parent Name</h2>
+<h2> <%= current_user.firstname + " " + current_user.middlename + " " + current_user.lastname %></h2>
   <div class="col-md-3">
   <h4>Parent Information</h4>
 
-  
+
 	<p>
 	  <strong>Username:</strong>
 	  <%= current_user.username %>
@@ -40,7 +40,7 @@
 	  <strong>Suffix:</strong>
 	  <%= current_user.suffix %>
 	</p>
-	
+
 
 	<p>
 	  <strong>Marital Status:</strong>

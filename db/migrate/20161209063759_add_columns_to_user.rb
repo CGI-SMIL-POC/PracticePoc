@@ -9,5 +9,7 @@ class AddColumnsToUser < ActiveRecord::Migration
     add_column :users, :state, :string
     add_column :users, :zipcode, :string
     add_column :users, :phone, :string
+    add_column :users, :homephone, :string
+    add_column :users, :cellphone, :string
   end
 end
