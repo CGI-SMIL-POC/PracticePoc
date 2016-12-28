@@ -8,14 +8,14 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: { :message => "The Confirm Password is required"}, length: { maximum: 20}, :confirmation => true, :on => :create
   validates :zipcode, presence: { :message => "The Zip Code is required"},
    numericality: { only_integer: true ,:message => "The ZIP Code must be numeric"},
-   length: { is: 5, :message => "The ZIP Code should be 5 characters"}
+   length: { is: 5, :message => "The ZIP Code must be 5 digits"}
   validates :email, presence: { :message => "The Email is required"}, length: { maximum: 100}
   validates :lastname, presence: { :message => "The Last Name is required"}, length: { maximum: 40 }
 #   def email_required?
 #   false
 # end
 
-def email_changed?
-  false
-end
+  def email_changed?
+    false
+  end
 end
